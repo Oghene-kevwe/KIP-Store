@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Single Products</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./output.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="flex justify-between items-center h-20 pt-10 px-10">
+      <button
+        class="sidebar-toggle text-blue-50 text-2xl h-10 w-14 rounded-2xl bg-blue-500 md:hover:bg-blue-400 md:hidden transition-all ease-in duration-300"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+      <!-- links -->
+      <div class="hidden md:block w-[40%]">
+        <ul class="flex flex-row text-gray-700 justify-between text-xl">
+          <li>
+            <a
+              href="./index.html"
+              class="md:hover:text-blue-500 transition-all ease-in duration-300"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              href="./allProducts.html"
+              class="md:hover:text-blue-500 transition-all ease-in duration-300"
+              >Products</a
+            >
+          </li>
+          <li>
+            <a
+              href="./about.html"
+              class="md:hover:text-blue-500 transition-all ease-in duration-300"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <!-- Logo -->
+      <div class="-ml-8">
+        <img src="./images/logo-black.svg" alt="" />
+      </div>
+      <!-- cart icon -->
+      <div class="relative grid place-items-center">
+        <button class="cart-btn text-gray-700 text-2xl">
+          <i class="fas fa-shopping-cart"></i>
+        </button>
+        <span
+          class="cart-counter absolute -top-3 -right-3 grid place-items-center text-blue-50 bg-blue-500 h-7 w-7 rounded-[50%]"
+          >0</span
+        >
+      </div>
+    </nav>
+    <!-- end of nav -->
+    <!-- Hero -->
+    <section class="mt-10">
+      <div class="bg-gray-200 h-[10rem] flex items-center pl-10">
+        <h1 class="page-hero-title text-gray-700 text-2xl">
+          Home / Single Product
+        </h1>
+      </div>
+    </section>
+    <!-- end of hero -->
+    <!-- Sidebar -->
+    <section
+      class="sidebar-overlay hidden z-10 place-items-center fixed h-full w-full left-0 bg-[rgba(0,0,0,0.5)] top-0"
+    >
+      <aside
+        class="bg-blue-50 p-4 fixed max-w-[700px] w-[90vw] h-[90vh] rounded-md flex flex-col"
+      >
+        <button class="sidebar-close text-right text-4xl text-blue-500">
+          <i class="fas fa-times"></i>
+        </button>
+        <ul>
+          <li>
+            <a href="./index.html" class="text-3xl">
+              <i class="fas fa-home fa-fw mr-4 mb-4 text-blue-500"></i>
+              Home</a
+            >
+          </li>
+          <li>
+            <a href="./allProducts.html" class="text-3xl">
+              <i class="fa-solid fa-shirt fa-fw mr-4 mb-4 text-blue-500"></i>
+              Products</a
+            >
+          </li>
+          <li>
+            <a href="./about.html" class="text-3xl">
+              <i class="fas fa-book fa-fw mr-4 mb-4 text-blue-500"></i>
+              About</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </section>
+    <!-- end of sidebar -->
+    <!-- Cart sidebar -->
+    <div
+      class="cart-overlay hidden z-10 bg-[rgba(0,0,0,0.5)] fixed top-0 w-full h-full"
+    >
+      <aside
+        class="fixed capitalize p-4 flex flex-col max-w-[400px] w-full h-full right-0 top-0 bg-white"
+      >
+        <button
+          class="cart-close text-4xl text-left text-blue-400 md:hover:text-blue-700 transition-all ease-in duration-300"
+        >
+          <i class="fas fa-times"></i>
+        </button>
+        <header>
+          <h3 class="text-3xl italic text-center">your bag</h3>
+        </header>
+        <!-- cart items -->
+        <div class="cart-items pt-10">
+          <h3
+            class="empty-cart-msg w-[50%] mr-auto ml-auto h-[15rem] text-2xl grid place-items-center text-center"
+          >
+            Your cart is empty!
+          </h3>
+        </div>
+        <!-- footer -->
+        <footer class="mt-auto mb-10 text-center">
+          <h3 class="cart-total italic text-2xl">total: $12.33</h3>
+          <button
+            class="cart-checkout capitalize w-60 bg-blue-500 text-blue-50 rounded-sm h-8 text-center mt-6 md:hover:bg-blue-400 md:hover:text-black transition-all ease-in duration-300"
+          >
+            checkout
+          </button>
+        </footer>
+      </aside>
+    </div>
+    <!-- product info -->
+    <section class="single-product">
+      <div class="single-product-container relative">
+        <h2
+          class="section-loading capitalize absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-3xl"
+        >
+          loading...
+        </h2>
+        <img src="./images/main-bcg.jpeg" alt="" class="single-product-img" />
+        <article class="single-product-info">
+          <div>
+            <h2 class="single-product-title">Shirt</h2>
+            <p class="single-product-category">Men</p>
+            <p class="single-product-price">$40</p>
+            <p class="single-product-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              aspernatur vitae vel. Repellat, ratione amet. Similique impedit
+              obcaecati necessitatibus eius!
+            </p>
+            <button class="addToCartBtn" data-id="id">Add to cart</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Javascript -->
+    <script type="module" src="./src/pages/singleProduct.js"></script>
+  </body>
+</html>
