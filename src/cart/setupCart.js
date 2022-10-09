@@ -139,6 +139,9 @@ function cartFunctionalities() {
 console.log(cartItemsDom.children.length);
 
 const init = () => {
+  if(cart.length >0){
+    cartMsg.style.display = 'none'
+  }
   addAllCartItemsToDOM();
   calculateCartTotal();
   displayCartCounter();
