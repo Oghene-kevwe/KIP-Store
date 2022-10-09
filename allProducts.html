@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="remove-scrollbar">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -13,7 +13,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
   </head>
-  <body>
+  <body class=" font-abeeZee tracking-widest ">
     <!-- navbar -->
     <nav class="flex justify-between items-center h-20 pt-10 px-[4vw]">
       <button
@@ -22,8 +22,8 @@
         <i class="fas fa-bars"></i>
       </button>
       <!-- links -->
-      <div class="hidden md:block w-[40%]">
-        <ul class="flex flex-row text-gray-700 justify-between text-xl">
+      <div class="hidden md:block w-[35%] ">
+        <ul class="flex flex-row text-gray-800 justify-between text-xl">
           <li>
             <a
               href="./index.html"
@@ -49,12 +49,16 @@
       </div>
 
       <!-- Logo -->
-      <div class="-ml-8">
-        <img src="./images/logo-black.svg" alt="" />
+      <div class=" -ml-[1rem] w-[10rem] ">
+        <img
+          src="./images/KIP-storeBLACK(2).svg"
+          alt=""
+          class="w-full h-full object-cover"
+        />
       </div>
       <!-- cart icon -->
       <div class="relative grid place-items-center">
-        <button class="cart-btn text-gray-700 text-2xl">
+        <button class="cart-btn text-gray-800 text-2xl">
           <i class="fas fa-shopping-cart"></i>
         </button>
         <span
@@ -67,7 +71,7 @@
     <!-- Hero -->
     <section class="mt-10">
       <div class="bg-gray-200 h-[10rem] flex items-center pl-[4vw]">
-        <h1 class="text-gray-700 text-2xl">Home / Products</h1>
+        <h1 class="text-gray-800 text-2xl">Home / Products</h1>
       </div>
     </section>
     <!-- end of hero -->
@@ -109,7 +113,7 @@
       class="cart-overlay hidden z-10 bg-[rgba(0,0,0,0.5)] fixed top-0 w-full h-full"
     >
       <aside
-        class="fixed capitalize p-4 flex flex-col max-w-[400px] w-full h-full right-0 top-0 bg-gray-50 overflow-auto "
+        class="fixed capitalize p-4 flex flex-col max-w-[400px] w-full h-full right-0 top-0 bg-gray-50 overflow-auto"
       >
         <button
           class="cart-close text-4xl text-left text-blue-400 md:hover:text-blue-700 transition-all ease-in duration-300"
@@ -117,11 +121,15 @@
           <i class="fas fa-times"></i>
         </button>
         <header>
-          <h3 class="text-3xl italic text-center">your bag</h3>
+          <h3 class="text-3xl italic text-center">your cart</h3>
         </header>
         <!-- cart items -->
         <div class="cart-items pt-10">
-          <h3 class="empty-cart-msg w-[50%] mr-auto ml-auto h-[15rem] text-2xl grid place-items-center text-center ">Your cart is empty!</h3>
+          <h3
+            class="empty-cart-msg w-[50%] mr-auto ml-auto h-[15rem] text-2xl grid place-items-center text-center"
+          >
+            Your cart is empty!
+          </h3>
         </div>
         <!-- footer -->
         <footer class="mt-auto mb-10 text-center">
@@ -134,31 +142,33 @@
         </footer>
       </aside>
     </div>
-<!-- end of cart sidebar -->
-    <main class=" text-gray-700">
+    <!-- end of cart sidebar -->
     <!-- products -->
-    <section
-      class="capitalize relative  pt-[10vh] min-h-[15rem] lg:grid grid-cols-[200px,1fr] gap-x-4 px-[4vw] overflow-auto"
-    >
-      <!-- filters -->
-      <div>
-        <div class="filter-container">
+    <main class="text-gray-800">
+      <section
+        class="capitalize relative w-[90vw] pt-[10vh] min-h-[15rem] md:grid grid-cols-[200px,1fr] gap-x-4 mx-[4vw] max-w-7xl"
+      >
+        <!-- filters -->
+
+        <div class="filter-container md:sticky top-4 h-fit bg-white">
           <!-- search -->
           <form class="search-form w-[200px] mb-8">
             <input
               type="text"
               placeholder="Search..."
-              class="search-input border-transparent w-full bg-gray-200 rounded-sm p-2 tracking-widest "
+              class="search-input border-transparent w-full bg-gray-200 rounded-sm p-2 tracking-widest"
             />
           </form>
           <!-- categories -->
-          <h4 class=" pb-2 ">category</h4>
-          <article class="category pl-[0.2rem] pb-[4vh] text-sm opacity-80 text-gray-600 ">
+          <h4 class="pb-2">category</h4>
             <!-- category buttons -->
-            
+
+          <article
+            class="category pl-[0.2rem] pb-[4vh] text-sm opacity-80 text-gray-600"
+          >
           </article>
           <!-- price -->
-          <h4 class=" pb-2">price</h4>
+          <h4 class="pb-2">price</h4>
           <form>
             <input
               class="price-filter"
@@ -168,23 +178,25 @@
               max="200"
             />
           </form>
-          <p class="price-value opacity-80 text-gray-600 pl-[0.2rem] text-sm"></p>
+          <p
+            class="price-value opacity-80 text-gray-600 pl-[0.2rem] text-sm"
+          ></p>
         </div>
-      </div>
+
         <!-- end of filters -->
-      
-      <!-- products container -->
-      <div class="products-container relative lg:grid grid-cols-[1fr,1fr,1fr] gap-4 border border-solid border-red-500"> 
-     
-      </div>
-      <!-- loading -->
-      <h2
-        class="section-loading capitalize absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-3xl"
-      >
-        loading...
-      </h2>
-    </section>
-  </main>
+
+        <!-- products container -->
+        <div
+          class="products-container relative grid md:grid-cols-[1fr,1fr] lg:grid-cols-[1fr,1fr,1fr] gap-4"
+        ></div>
+        <!-- loading -->
+        <h2
+          class="section-loading capitalize absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-3xl"
+        >
+          loading...
+        </h2>
+      </section>
+    </main>
     <!-- Javascript -->
     <script type="module" src="./src/pages/allProducts.js"></script>
   </body>

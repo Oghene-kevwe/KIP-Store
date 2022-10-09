@@ -100,12 +100,7 @@ function removeItem(id) {
 // cartDOM functionalities
 function cartFunctionalities() {
   
-  // if(cart.length > 0){
-  //   console.log('happy');
-  //   cartMsg.style.display = 'none'
-  // }else{
-  //   cartMsg.style.display = 'grid'
-  // }
+  
 
   cartItemsDom.addEventListener("click", (e) => {
     const element = e.target;
@@ -129,6 +124,10 @@ function cartFunctionalities() {
       } else {
         parent.previousElementSibling.textContent = amount;
       }
+    }
+     
+    if(cart.length <1){
+      cartMsg.style.display = 'grid'
     }
 
     calculateCartTotal();

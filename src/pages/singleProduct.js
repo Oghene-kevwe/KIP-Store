@@ -47,4 +47,5 @@ window.addEventListener("DOMContentLoaded", async function () {
   cartBtn.addEventListener("click", function () {
     addToCart(productId);
   });
+  loading.style.display = 'none'
 });

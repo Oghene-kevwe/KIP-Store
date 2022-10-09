@@ -5,7 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      
+      fontFamily:{
+        abeeZee:['ABeeZee']
+      }
     },
   },
   plugins: [],

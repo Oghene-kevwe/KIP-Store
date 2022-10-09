@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -7,7 +9,7 @@
     min-height: 100vh;
     margin-top: -8rem;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(./images/main-bcg.jpeg) center/cover;
+      url(./images/Hero-image.jpg) center/cover;
     display: grid;
     place-items: center;
   }
@@ -36,7 +38,7 @@
 }
 
 .product-name {
-  @apply text-gray-500;
+  @apply text-gray-500 text-base w-[70%] ml-auto mr-auto mt-4;
 }
 .product-search-error-msg {
   @apply text-3xl;
@@ -51,24 +53,22 @@
 .product-link-and-btn-container {
   @apply absolute w-full  h-full transition-all ease-out duration-300 flex justify-center items-center gap-x-2 text-xl text-blue-50 left-[50%] top-[50%]  -translate-x-[50%] -translate-y-[50%] md:opacity-0 md:hover:opacity-100;
 }
-.single-product-link,.product-cart-btn{
-  @apply grid place-items-center bg-blue-500 w-10 h-10 rounded-[50%] md:hover:bg-blue-400 transition-all ease-in duration-300
+.single-product-link,
+.product-cart-btn {
+  @apply grid place-items-center bg-blue-500 w-10 h-10 rounded-[50%] md:hover:bg-blue-400 transition-all ease-in duration-300;
 }
 
-.product-footer{
-  @apply  text-center
+.product-footer {
+  @apply text-center;
 }
 
-.product-price{
-  @apply font-semibold
+.product-price {
+  @apply font-semibold;
 }
 
 /*Products filter styles */
-.filter-container{
-  @apply sticky top-4 
-}
 .category {
-  @apply flex flex-col items-start gap-y-2  ;
+  @apply flex flex-col items-start gap-y-2;
 }
 .category-btn {
   @apply capitalize;
@@ -84,12 +84,10 @@
 .single-product-container {
   @apply lg:flex lg:flex-row justify-between gap-x-8;
 }
-.single-product-img {
-  @apply w-[40vw] h-[40vh] object-cover;
-}
+
 /* DOM fetch error */
 .DOM-fetch-error {
-  @apply text-3xl text-gray-700;
+  @apply text-3xl text-gray-800;
 }
 .back-home {
   @apply text-2xl bg-blue-500 text-blue-50 w-[4rem];
@@ -105,20 +103,20 @@
 }
 
 .cart-product-info {
-  @apply ml-4 w-[15rem] 
+  @apply ml-4 w-[15rem];
 }
 
-.cart-item-name{
-  @apply text-sm mb-2 w-[80%] 
+.cart-item-name {
+  @apply text-sm mb-2 w-[80%];
 }
-.cart-item-price{
-  @apply text-xs
+.cart-item-price {
+  @apply text-xs;
 }
-.cart-item-remove-btn{
-  @apply text-sm opacity-70
+.cart-item-remove-btn {
+  @apply text-sm opacity-70;
 }
 .cart-btns-container {
-  @apply ml-auto text-center text-sm
+  @apply ml-auto text-center text-sm;
 }
 .cart-item-increase-btn,
 .cart-item-decrease-btn {
